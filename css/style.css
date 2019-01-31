@@ -254,13 +254,9 @@ p {
   margin-top: 1em;
 }
 .footer-content {
-  position: absolute;
-  width: 100%;
-  top: 0;
   color: #FFFFFF;
   padding: 0 30%;
   font-size: 1.4em;
-  top: 6%;
 }
 
 .footer-text {
@@ -272,76 +268,59 @@ p {
   font-size: 1.3rem;
 }
 
-.footer-circle {
+.footer-cropped {
+  position: relative;
   width: 100%;
-  max-height: 27vw;
+  padding-top: 300px;
+}
+
+.footer-circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
   min-height: 500px;
-  overflow-y: hidden;
+  height: 35vw;
+}
+
+.footer-circle {
+  transform-origin: 50% 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  border: 1px solid #8997EE;
+  border-bottom: 0px;
+  height: 100vw;
 }
 
 .footer-circle-outer-ring {
-    position: relative;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom: 0px;
-    width: 100%;
-    height: auto;
-    padding-top: 100%;
-    border: 1px solid #8997EE;
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
 .footer-circle-middle-ring {
-    position: relative;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom: 0px;
-    margin-top: -100%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    padding-top: 100%;
-    transform: scale(0.9);
-    border: 1px solid #8997EE;
-    opacity: 0.4;
+  transform: scale(0.9);
+  opacity: 0.4;
 }
 
 .footer-circle-inner-ring {
-    position: relative;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom: 0px;
-    margin-top: -100%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    padding-top: 100%;
-    transform: scale(0.8);
-    border: 1px solid #8997EE;
-    opacity: 0.6;
+  transform: scale(0.8);
+  opacity: 0.6;
 }
 
 .footer-circle-core {
-    position: relative;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom: 0px;
-    margin-top: -100%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    padding-top: 100%;
-    transform: scale(0.7);
-    
-    background-image: -webkit-linear-gradient(#B87AE9 2%, #8997EE 99%);
-    background-image: -o-linear-gradient(#B87AE9 2%, #8997EE 99%);
-    background-image: linear-gradient(#B87AE9 2%, #8997EE 99%);
-    box-shadow: 0 4px 35px 3px rgba(0,0,0,0.16);
-}
+  transform: scale(0.7);
+  padding-top: 50px;
 
+  background-image: -webkit-linear-gradient(#B87AE9 2%, #8997EE 99%);
+  background-image: -o-linear-gradient(#B87AE9 2%, #8997EE 99%);
+  background-image: linear-gradient(#B87AE9 2%, #8997EE 99%);
+  box-shadow: 0 4px 35px 3px rgba(0,0,0,0.16);
+
+  border: 0;
+}
 
 @media screen and (max-width: 480px) {
   .footer-content {
